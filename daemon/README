@@ -1,0 +1,39 @@
+License
+-------
+
+Copyright 2009, Mads D. Kristensen <madsdk@gmail.com>
+Presence is licensed under the GNU General Public License v3. See
+COPYING for more details.
+
+
+Pre-requisites
+--------------
+
+This version of Presence has been developed using Qt 4.5 so the Qt 4.5
+library and development tools are needed to build it. It has also been
+tested and found to run under Qt 4.6 beta 1.
+
+
+Building from a downloaded tar.gz file
+--------------------------------------
+
+$ qmake
+$ make
+
+Note: If you are compiling under Mac you should add the 
+'-spec macx-g++' option to qmake in order to generate a GNU makfile.
+
+After building has finished an executable called presence is created
+within the qPresence folder.
+
+
+Building from a git clone
+-----------------------------
+
+1) Go to the daemon dir ('/daemon'). 
+2) Compile the thing:
+   $ qmake
+   $ make
+
+Note: If you are compiling under Mac you should add the 
+'-spec macx-g++' option to qmake in order to generate a GNU makfile.
