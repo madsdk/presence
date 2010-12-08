@@ -16,7 +16,7 @@
 from __future__ import with_statement
 from threading import Thread
 from thread import allocate_lock
-import struct, select, socket, time, logging
+import select, socket, logging
 from presenceservice import PresenceService
 from presenceexceptions import PresenceException
 from nodename import NodeName
@@ -195,7 +195,7 @@ class Presence(Thread):
                         continue
 
                     # Run through the message sorting out the service announcements.
-                    for x in range(0, service_count.value):
+                    for _ in range(0, service_count.value):
                         # Read in the service.
                         try:
                             service = PresenceService()
