@@ -7,9 +7,9 @@ if [ "$1" = "" ]; then
 	echo "Usage: build.sh version_number";
 	exit 1
 else
-	VERSION="-$1"
+	VERSION="$1"
 fi
-BUILDDIR=presence_lib$VERSION
+BUILDDIR=presence_lib-$VERSION
 
 # Create the $BUILDDIR dir
 if [ -d $BUILDDIR ]; then 
