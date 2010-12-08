@@ -4,7 +4,8 @@ LIBDIR=../../libs/
 
 # Check for version number
 if [ "$1" = "" ]; then
-	VERSION=""
+	echo "Usage: build.sh version_number";
+	exit 1
 else
 	VERSION="-$1"
 fi
@@ -21,5 +22,8 @@ cp $LIBDIR/python_common/src/*.py $BUILDDIR/presence
 cp $LIBDIR/python_common/src/packed_data/*.py $BUILDDIR/presence/packed_data
 cp $LIBDIR/python_client_lib/src/presence/*.py $BUILDDIR/presence
 cp setup.py $BUILDDIR/
+sed -i s/VERSION/$VERSION/ $BUILDDIR/setup.py
 
 tar cfz $BUILDDIR.tar.gz $BUILDDIR
+
+exit 0
