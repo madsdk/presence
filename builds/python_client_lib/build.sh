@@ -22,7 +22,7 @@ cp $LIBDIR/python_common/src/*.py $BUILDDIR/presence
 cp $LIBDIR/python_common/src/packed_data/*.py $BUILDDIR/presence/packed_data
 cp $LIBDIR/python_client_lib/src/presence/*.py $BUILDDIR/presence
 cp setup.py $BUILDDIR/
-sed -i s/VERSION/$VERSION/ $BUILDDIR/setup.py
+sed -i "" s/VERSION/$VERSION/ $BUILDDIR/setup.py
 
 tar cfz $BUILDDIR.tar.gz $BUILDDIR
 
