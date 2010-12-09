@@ -11,6 +11,13 @@ else
 fi
 BUILDDIR=presence_client_lib-$VERSION
 
+# sed hack...
+if [ `uname -s` = "Darwin" ]; then 
+	SED="sed -i \"\""
+else
+	SED="sed -i\"\""
+fi
+
 # Create the $BUILDDIR dir
 if [ -d $BUILDDIR ]; then 
 	rm -rf $BUILDDIR;
@@ -22,7 +29,7 @@ cp $LIBDIR/python_common/src/*.py $BUILDDIR/presence
 cp $LIBDIR/python_common/src/packed_data/*.py $BUILDDIR/presence/packed_data
 cp $LIBDIR/python_client_lib/src/presence/*.py $BUILDDIR/presence
 cp setup.py $BUILDDIR/
-sed -i "" s/VERSION/$VERSION/ $BUILDDIR/setup.py
+$SED s/VERSION/$VERSION/ $BUILDDIR/setup.py
 
 tar cfz $BUILDDIR.tar.gz $BUILDDIR
 
