@@ -20,7 +20,7 @@ import struct, select, socket, Queue, logging
 from presenceservice import PresenceService
 from presencepeer import PresencePeer
 from presenceexceptions import PresenceException
-from packed_data import UnpackingError, ValidationError, UInt16
+from packed_data import UnpackingError, ValidationError, UInt16, MaxLengthCString
 from nodename import NodeName
 from servicename import ServiceName
 

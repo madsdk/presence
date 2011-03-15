@@ -8,7 +8,7 @@ class PresencePeer(object):
         self._address = UInt32()
         self.address = address
         
-    def name():
+    def name(): #@NoSelf
         doc = """Property for name."""
         def fget(self):
             return self._name.name
@@ -17,7 +17,7 @@ class PresencePeer(object):
         return locals()
     name = property(**name())
 
-    def address():
+    def address(): #@NoSelf
         doc = """Property for address."""
         def fget(self):
             return self._address.value
@@ -28,7 +28,7 @@ class PresencePeer(object):
         return locals()
     address = property(**address())
     
-    def address_str():
+    def address_str(): #@NoSelf
         doc = """Address property that returns a string representation."""
         def fget(self):
             return self._address.pack()

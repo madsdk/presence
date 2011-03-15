@@ -7,7 +7,7 @@ class NodeName(MaxLengthCString):
         super(NodeName, self).__init__(NodeName.NODE_NAME_SIZE)
         self.name = name
         
-    def name():
+    def name(): #@NoSelf
         doc = """Property for name."""
         def fget(self):
             return self.string

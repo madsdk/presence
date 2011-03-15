@@ -6,7 +6,7 @@ class UInt32(object):
         super(UInt32, self).__init__()
         self.value = value
         
-    def value():
+    def value(): #@NoSelf
         doc = """Property for the value member."""
         def fget(self):
             return self._value

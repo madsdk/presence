@@ -1,6 +1,6 @@
 from servicename import ServiceName
 from servicedata import ServiceData
-from packed_data import UInt16, UInt32, MaxLengthCString, UnpackingError, ValidationError
+from packed_data import UInt16, UnpackingError, ValidationError
 
 class PresenceService(object):
     SERVICE_NAME_SIZE = 32

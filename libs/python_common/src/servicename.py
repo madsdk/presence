@@ -7,7 +7,7 @@ class ServiceName(MaxLengthCString):
         super(ServiceName, self).__init__(ServiceName.SERVICE_NAME_SIZE)
         self.name = name
         
-    def name():
+    def name(): #@NoSelf
         doc = """Property for name."""
         def fget(self):
             return self.string

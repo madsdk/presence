@@ -6,7 +6,7 @@ class ServiceData(MaxLengthCString):
     def __init__(self, data=''):
         super(ServiceData, self).__init__(ServiceData.SERVICE_DATA_SIZE, data)
 
-    def data():
+    def data(): #@NoSelf
         doc = """Property for data."""
         def fget(self):
             return self.string

@@ -7,7 +7,7 @@ class MaxLengthCString(object):
         self._length = length
         self.string = string
         
-    def string():
+    def string(): #@NoSelf
         doc = """Property for the string member."""
         def fget(self):
             return self._string
